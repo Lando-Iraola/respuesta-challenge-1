@@ -57,8 +57,8 @@ function formatearDatos(data)
 
                 La variable indice existe para asegurar que se esta intentando guardar en la posicion en arreglo correspondiente a la sede de linea.Sede
             */
-            const indice = _indiceAUtilizar(resultado, linea);
             _agregarSedes(resultado, linea);
+            const indice = _indiceAUtilizar(resultado, linea);
             _agregarCursos(resultado, linea, indice);
             _agregarSecciones(resultado, linea, indice);
             _agregarOfertas(resultado, linea, indice);
@@ -92,7 +92,7 @@ function _indiceAUtilizar(resultado, data)
     );
     
     const indiceNuevo = resultado.length === 0 ? 0 : resultado.length - 1;
-    const indice = indiceConocido ? indiceConocido : indiceNuevo;           
+    const indice = indiceConocido ? indiceConocido : indiceNuevo;
 
     return indice;
 }
